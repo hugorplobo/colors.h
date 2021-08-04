@@ -125,49 +125,49 @@ void bold() {
 
 void faint() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[2m%s");
+        puts("\033[2m");
     #endif
 }
 
 void italic() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[3m%s");
+        puts("\033[3m");
     #endif
 }
 
 void underline() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[4m%s");
+        puts("\033[4m");
     #endif
 }
 
 void blink() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[5m%s");
+        puts("\033[5m");
     #endif
 }
 
 void reverse() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[7m%s");
+        puts("\033[7m");
     #endif
 }
 
 void invisible() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[8m%s");
+        puts("\033[8m");
     #endif
 }
 
 void strikethrough() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[9m%s");
+        puts("\033[9m");
     #endif
 }
 
 void grey() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[30m%s");
+        puts("\033[30m");
     #else
         wset_attributes(0, -1);
     #endif
@@ -175,7 +175,7 @@ void grey() {
 
 void red() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[31m%s");
+        puts("\033[31m");
     #else
         wset_attributes(FOREGROUND_RED, -1);
     #endif
@@ -183,7 +183,7 @@ void red() {
 
 void green() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[32m%s");
+        puts("\033[32m");
     #else
         wset_attributes(FOREGROUND_GREEN, -1);
     #endif
@@ -191,7 +191,7 @@ void green() {
 
 void yellow() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[33m%s");
+        puts("\033[33m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_GREEN, -1);
     #endif
@@ -199,7 +199,7 @@ void yellow() {
 
 void blue() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[34m%s");
+        puts("\033[34m");
     #else
         wset_attributes(FOREGROUND_BLUE, -1);
     #endif
@@ -207,7 +207,7 @@ void blue() {
 
 void magenta() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[35m%s");
+        puts("\033[35m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_BLUE, -1);
     #endif
@@ -215,7 +215,7 @@ void magenta() {
 
 void cyan() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[36m%s");
+        puts("\033[36m");
     #else
         wset_attributes(FOREGROUND_BLUE | FOREGROUND_GREEN, -1);
     #endif
@@ -223,7 +223,7 @@ void cyan() {
 
 void white() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[37m%s");
+        puts("\033[37m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE, -1);
     #endif
@@ -231,7 +231,7 @@ void white() {
 
 void bright_grey() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[90m%s");
+        puts("\033[90m");
     #else
         wset_attributes(0 | FOREGROUND_INTENSITY, -1);
     #endif
@@ -239,7 +239,7 @@ void bright_grey() {
 
 void bright_red() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[91m%s");
+        puts("\033[91m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_INTENSITY, -1);
     #endif
@@ -247,7 +247,7 @@ void bright_red() {
 
 void bright_green() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[92m%s");
+        puts("\033[92m");
     #else
         wset_attributes(FOREGROUND_GREEN | FOREGROUND_INTENSITY, -1);
     #endif
@@ -255,7 +255,7 @@ void bright_green() {
 
 void bright_yellow() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[93m%s");
+        puts("\033[93m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, -1);
     #endif
@@ -263,7 +263,7 @@ void bright_yellow() {
 
 void bright_blue() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[94m%s");
+        puts("\033[94m");
     #else
         wset_attributes(FOREGROUND_BLUE | FOREGROUND_INTENSITY, -1);
     #endif
@@ -271,7 +271,7 @@ void bright_blue() {
 
 void bright_magenta() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[95m%s");
+        puts("\033[95m");
     #else
         wset_attributes(FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY, -1);
     #endif
@@ -279,7 +279,7 @@ void bright_magenta() {
 
 void bright_cyan() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[96m%s");
+        puts("\033[96m");
     #else
         wset_attributes(FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY, -1);
     #endif
@@ -287,7 +287,7 @@ void bright_cyan() {
 
 void bright_white() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[97m%s");
+        puts("\033[97m");
     #else
         wset_attributes(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY, -1);
     #endif
@@ -295,7 +295,7 @@ void bright_white() {
 
 void on_grey() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[40m%s");
+        puts("\033[40m");
     #else
         wset_attributes(-1, 0);
     #endif
@@ -303,7 +303,7 @@ void on_grey() {
 
 void on_red() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[41m%s");
+        puts("\033[41m");
     #else
         wset_attributes(-1, BACKGROUND_RED);
     #endif
@@ -311,7 +311,7 @@ void on_red() {
 
 void on_green() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[42m%s");
+        puts("\033[42m");
     #else
         wset_attributes(-1, BACKGROUND_GREEN);
     #endif
@@ -319,7 +319,7 @@ void on_green() {
 
 void on_yellow() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[43m%s");
+        puts("\033[43m");
     #else
         wset_attributes(-1, BACKGROUND_RED | BACKGROUND_GREEN);
     #endif
@@ -327,7 +327,7 @@ void on_yellow() {
 
 void on_blue() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[44m%s");
+        puts("\033[44m");
     #else
         wset_attributes(-1, BACKGROUND_BLUE);
     #endif
@@ -335,7 +335,7 @@ void on_blue() {
 
 void on_magenta() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[45m%s");
+        puts("\033[45m");
     #else
         wset_attributes(-1, BACKGROUND_RED | BACKGROUND_BLUE);
     #endif
@@ -343,7 +343,7 @@ void on_magenta() {
 
 void on_cyan() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[46m%s");
+        puts("\033[46m");
     #else
         wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_GREEN);
     #endif
@@ -351,7 +351,7 @@ void on_cyan() {
 
 void on_white() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[47m%s");
+        puts("\033[47m");
     #else
         wset_attributes(-1, BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE);
     #endif
@@ -359,7 +359,7 @@ void on_white() {
 
 void on_bright_grey() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[100m%s");
+        puts("\033[100m");
     #else
         wset_attributes(-1, 0 | BACKGROUND_INTENSITY);
     #endif
@@ -367,7 +367,7 @@ void on_bright_grey() {
 
 void on_bright_red() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[101m%s");
+        puts("\033[101m");
     #else
         wset_attributes(-1, BACKGROUND_RED | BACKGROUND_INTENSITY);
     #endif
@@ -375,7 +375,7 @@ void on_bright_red() {
 
 void on_bright_green() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[102m%s");
+        puts("\033[102m");
     #else
         wset_attributes(-1, BACKGROUND_GREEN | BACKGROUND_INTENSITY);
     #endif
@@ -383,7 +383,7 @@ void on_bright_green() {
 
 void on_bright_yellow() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[103m%s");
+        puts("\033[103m");
     #else
         wset_attributes(-1, BACKGROUND_GREEN | BACKGROUND_RED | BACKGROUND_INTENSITY);
     #endif
@@ -391,7 +391,7 @@ void on_bright_yellow() {
 
 void on_bright_blue() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[104m%s");
+        puts("\033[104m");
     #else
         wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_INTENSITY);
     #endif
@@ -399,7 +399,7 @@ void on_bright_blue() {
 
 void on_bright_magenta() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[105m%s");
+        puts("\033[105m");
     #else
             wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_RED | BACKGROUND_INTENSITY);
     #endif
@@ -407,7 +407,7 @@ void on_bright_magenta() {
 
 void on_bright_cyan() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[106m%s");
+        puts("\033[106m");
     #else
             wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_INTENSITY);
     #endif
@@ -415,7 +415,7 @@ void on_bright_cyan() {
 
 void on_bright_white() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
-        puts("\033[107m%s");
+        puts("\033[107m");
     #else
             wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_RED | BACKGROUND_INTENSITY);
     #endif
