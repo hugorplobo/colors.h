@@ -15,7 +15,7 @@ The library uses ANSI escape sequences to apply colors and styles to the termina
 Just add the `colors.h` from `include/colors/colors.h` file to your project's include folder.
 
 - Example with gcc
-`g++ test.cpp -o build/test -I include/`
+`gcc test.c -o build/test -I include/`
 
 ## Usage
 
