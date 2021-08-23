@@ -293,6 +293,18 @@ void bright_white() {
     #endif
 }
 
+void color256(int color_code) {
+    #if defined(COLORS_USE_ANSI_ESCAPE)
+        printf("\033[38;5;%d;m", color_code);
+    #endif
+}
+
+void color_rgb(int r, int g, int b) {
+    #if defined(COLORS_USE_ANSI_ESCAPE)
+        printf("\033[38;2;%d;%d;%dm", r, g, b);
+    #endif
+}
+
 void on_grey() {
     #if defined(COLORS_USE_ANSI_ESCAPE)
         puts("\033[40m");
@@ -418,6 +430,18 @@ void on_bright_white() {
         puts("\033[107m");
     #else
             wset_attributes(-1, BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_RED | BACKGROUND_INTENSITY);
+    #endif
+}
+
+void on_color256(int color_code) {
+    #if defined(COLORS_USE_ANSI_ESCAPE)
+        printf("\033[48;5;%d;m", color_code);
+    #endif
+}
+
+void on_color_rgb(int r, int g, int b) {
+    #if defined(COLORS_USE_ANSI_ESCAPE)
+        printf("\033[48;2;%d;%d;%dm", r, g, b);
     #endif
 }
 
